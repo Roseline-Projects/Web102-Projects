@@ -8,10 +8,10 @@ function App() {
   const [cardCount, setCardCount] = useState(0)
 
   const handleNext = () => {
-    if(isFlipped) {
-      handleFlip()
-      console.log('here')
-    }
+    // if(isFlipped) {
+    //   handleFlip()
+    //   console.log('here')
+    // }
     setCardCount(Math.floor(Math.random() * (cardInfo.length)))
   }
 
