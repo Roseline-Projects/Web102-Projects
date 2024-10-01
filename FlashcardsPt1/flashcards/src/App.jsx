@@ -2,11 +2,16 @@ import { useState } from 'react'
 import './App.css'
 import Flashcard from '../components/Flashcard'
 import { cardInfo } from './Data'
+// import { handleFlip, isFlipped }  from "../components/Flashcard"
 
 function App() {
   const [cardCount, setCardCount] = useState(0)
 
   const handleNext = () => {
+    if(isFlipped) {
+      handleFlip()
+      console.log('here')
+    }
     setCardCount(Math.floor(Math.random() * (cardInfo.length)))
   }
 
