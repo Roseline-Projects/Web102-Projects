@@ -25,3 +25,13 @@
 .contents-container:hover {
     color:rgb(84, 84, 84);
 }
+
+.card-front{
+    font-family: inherit;
+
+}
+
+.card-back{
+    font-family: inherit;
+
+}

@@ -45,6 +45,11 @@
     font-weight: 300;
 }
 
+#longest-streak {
+    color: rgb(53, 53, 53);
+    font-weight: 500;
+}
+
 .card-container {
     margin: 1%;
 
@@ -54,7 +59,7 @@
     justify-content: center;
 }
 
-#next-button {
+.control-button {
     background-color: rgb(253, 152, 152, 0.90);
 
     font-size: 18px;
@@ -62,6 +67,29 @@
 
     padding: 10px;
     margin-top: 2%;
+    margin: 5px;
+
+    border: none;
+    border-radius: 20%;
+}
+
+.correct-ans{
+    background-color: lightgreen;
+}
+
+.wrong-ans{
+    background-color: lightcoral;
+}
+
+.check-button {
+    background-color: rgb(253, 152, 152, 0.90);
+
+    font-size: 14px;
+    color: rgb(52, 52, 52);
+
+    padding: 7px;
+    margin-top: 2%;
+    margin: 5px;
 
     border: none;
     border-radius: 20%;
