@@ -3,4 +3,20 @@
     display:flex;
     align-items: center;
     justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.keyword-button {
+    border: none;
+    border-radius: 15px;
+}
+
+.req-img { 
+    border-left: 10px solid rgba(7, 0, 67, 0.611);
+    border-bottom: 10px solid rgba(7, 0, 67, 0.611);
+    border-top: 10px solid rgba(232, 255, 247, 0.611);
+    border-right: 10px solid rgba(232, 255, 247, 0.611);
 }
