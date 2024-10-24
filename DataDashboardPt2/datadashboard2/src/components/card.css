@@ -1,0 +1,10 @@
+.card-card {
+    border: solid 4px gray;
+    border-radius: 12%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.val {
+    color: gold;
+}
