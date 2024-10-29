@@ -1,4 +1,4 @@
-# Web Development Project 5 - Brewery Stats
+# Web Development Project 6 - Brewery Stats
 
 Submitted by: Roseline
 
