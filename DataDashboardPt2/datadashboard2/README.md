@@ -11,20 +11,17 @@ Time spent: 6 hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **The list displays a list of data fetched using an API call**
-- [X] **Data uses the useEffect React hook and async/await syntax**
-- [X] **The app dashboard includes at least three summary statistics about the data such as**
-  - [X] The current state of all shown breweries
-  - [X] The city with the most locations
-  - [X] The total number of locations found for that search
-- [X] **A search bar allows the user to search for an item in the fetched data**
-- [X] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [X] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [X] **Clicking on an item in the list view displays more details about it**
+  - [X] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
+  - [X] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.  
+
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -34,14 +31,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='web102_datadashpart2_2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Licecap
 
 ## Notes
 
-Having worked with so many state variables, I believe I've learned a fair bit about how react components
-update them asynchronously. 
+Incorporating new libraries is a good challenge! It was interesting to see how Recharts builds on React components
+to create interactive graphs.
 
 ## License
 

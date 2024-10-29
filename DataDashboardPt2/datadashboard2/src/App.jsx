@@ -3,6 +3,7 @@ import React from 'react'
 import './App.css'
 import Card from './components/Card'
 import ResultsList from './components/ResultsList'
+import BrewChart from './components/BrewChart'
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
   //Dashboard stats---------------------------
   //const [totalLocations, setTotalLocations] = useState(0)
   const [currState, setCurrState] = useState('')
-  const [cardStats, setCardStats] = useState(null)
+  //const [cardStats, setCardStats] = useState(null)
+  const [chartFreqDist, setChartFreqDist] = useState(null)
   //------------------------------------------
 
   //========================================================================================================================
@@ -109,7 +111,7 @@ function App() {
 
   useEffect(() => {
     if(brewsList != null) {
-      console.log("brewslist on use effect: ", brewsList)
+      //console.log("brewslist on use effect: ", brewsList)
       let totalLocationsTest = (brewsList.length == 200? '200+' : brewsList.length)
       let state = currState
       let loc = findMostLocations()
@@ -134,6 +136,29 @@ function App() {
 
   }, [brewsList])
 
+  const createFreqDistribution = () => {
+    if(brewsList != null) {
+    let freqdist = {}
+    //console.log(brewsList)
+      
+      for(let i = 0; i < brewsList.length; i++) {
+        if(freqdist[brewsList[i].type] == undefined) {
+          freqdist[brewsList[i].type] = 1
+
+        } else {
+          freqdist[brewsList[i].type]++
+        }
+      }
+
+      return freqdist
+    }
+  }
+
+  useEffect(() => {
+    let typeFreqDist = createFreqDistribution()
+    setChartFreqDist(typeFreqDist)
+  }, [brewsList])
+
   const findMostLocations = () => {
       //Create a freq distribution with maps
 
@@ -156,33 +181,38 @@ function App() {
           max = keys[j]
         }
       }
-      
       return max;
-
   }
 
 
 //---------------------------------------------
-  const updateCards = () => {
-
-    //console.log(brewsList)
-    setTotalLocations(brewsList.length)
-    console.log('total locations ', totalLocations)
-  }
 
   return (
     <div className='page-wrapper'>
       <div className='dash-container'>
-        <div className='header-container'>
-          <h1>Brewery Stats</h1>
-          <h4>Check out American breweries by state.</h4>
-        </div>
-        <div className='stats-container'>
-          {
-            cardDataList && cardDataList.map(cardData =>
-              <Card cardData={cardData} />
-            )
-          }
+        <div className='top-portion'>
+
+          <div className='header-stats-wrapper'>
+            <div className='header-container'>
+              <h1>Brewery Stats</h1>
+              <h4>Check out American breweries by state.</h4>
+            </div>
+            <div className='stats-container'>
+              {
+                cardDataList && cardDataList.map(cardData =>
+                  <Card cardData={cardData} />
+                )
+              }
+
+            </div>
+          </div>
+          <div className='charts-container'>
+            {
+              chartFreqDist != null ? (
+                <BrewChart freqDist={chartFreqDist} />
+              ) : (<div></div>)
+            }
+          </div>
 
         </div>
         <div className='results-container'>
@@ -217,6 +247,7 @@ function App() {
           <div className='results'>
             <ResultsList brewsList={brewsList}/>
           </div>
+          
 
         </div>
       </div>

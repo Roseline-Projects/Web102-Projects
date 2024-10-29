@@ -88,3 +88,29 @@ input {
   width: 100%;
   height: 100%;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.home-link {
+  border: none;
+  width: 75px;
+}
+
+.top-portion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.charts-container {
+  min-width: 50%;
+  min-height: 100%;
+}
